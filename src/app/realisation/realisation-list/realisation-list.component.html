@@ -1,0 +1,68 @@
+<div class="container">
+	<h1>Applications web réalisées</h1>
+	<div class="realisation-container">
+		<div class="realisation-list" *ngFor="let item of realisationList">
+			<div class="image-container">
+				<img [src]="item.picture" />
+			</div>
+			<div class="text-container">
+				<h3 class="title">{{ item.name }}</h3>
+				<p class="description">{{ item.description }}</p>
+				<div class="tags">
+					<div class="tag" *ngFor="let type of item.types">
+						<img [src]="logoImages[type]" [alt]="type" /><span>{{ type }}</span>
+					</div>
+				</div>
+				<div class="share">
+					<span
+						>Accéder au site :
+						<a href="{{ item.url }}" target="_blank">
+							{{ item.title }}
+							<img src="assets/link.svg" alt="Link" /> </a
+					></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+
+		<div class="projects-list" *ngFor="let item of realisationList" realisationBorderCard>
+		<div class="image-container">
+			<img [src]="item.picture" />
+		</div>
+		<div class="text-container">
+			<p>{{ item.name }}</p>
+			<p>
+				<small>{{ item.created | date : "dd/MM/yyyy" }}</small>
+			</p>
+			<span
+				class="type"
+				*ngFor="let type of item.types"
+				[ngStyle]="type | typeColor"
+				>{{ type }}</span
+			>
+		</div>
+	</div>
+-->
+
+<!-- 
+
+	<div class="realisation-list">
+		<div class="image-container">AH !</div>
+		<div class="text-container">Salut !</div>
+	</div>
+	<div class="realisation-list">
+		<div class="image-container">AH !</div>
+		<div class="text-container">Salut !</div>
+	</div>
+	<div class="realisation-list">
+		<div class="image-container">AH !</div>
+		<div class="text-container">Salut !</div>
+	</div>
+	<div class="realisation-list">
+		<div class="image-container">AH !</div>
+		<div class="text-container">Salut !</div>
+	</div>
+ -->
